@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug LÖVE2D",
+            "type": "lua-local",
+            "request": "launch",
+            "program": {
+                "command": "/usr/bin/love-11.3"
+            },
+            "args": [
+                "${workspaceFolder}"
+            ]
+        }
+    ]
+}
