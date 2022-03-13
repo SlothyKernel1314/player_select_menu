@@ -1,6 +1,6 @@
 local game_settings = {}
 
-game_settings.max_characters = 16
+game_settings.max_characters = 12
 
 game_settings.screen_width = 256
 game_settings.screen_height = 224

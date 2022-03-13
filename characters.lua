@@ -2,22 +2,21 @@ local my_game_settings = require("game_settings")
 
 local characters = {}
 
-characters.roster = {}
--- @param1 : rank
--- @param2 : formatted menu name
--- @param3 : country
-characters.roster.ryu = {1, "Ryu", "Japan"}
-characters.roster.honda = {2, "E.Honda", "Japan"}
-characters.roster.blanka = {3, "Blanka", "Brazil"}
-characters.roster.guile = {4, "Guile", "U.S.A."}
-characters.roster.balrog = {5, "Balrog", "U.S.A."}
-characters.roster.vega = {6, "Vega", "Spain"}
-characters.roster.ken = {7, "Ken", "U.S.A."}
-characters.roster.chunli = {8, "Chun Li", "China"}
-characters.roster.zangief = {9, "Zangief", "U.S.S.R."}
-characters.roster.dhalsim = {10, "Dhalsim", "India"}
-characters.roster.sagat = {11, "Sagat", "Thailand"}
-characters.roster.bison = {12, "M.Bison", "Thailand"}
+characters.roster = {
+    -- @param1 : rank, @param2 : character name, @param3 : country
+    {1, "Ryu", "Japan"},
+    {2, "E.Honda", "Japan"},
+    {3, "Blanka", "Brazil"},
+    {4, "Guile", "U.S.A."},
+    {5, "Balrog", "U.S.A."},
+    {6, "Vega", "Spain"},
+    {7, "Ken", "U.S.A."},
+    {8, "Chun Li", "China"},
+    {9, "Zangief", "U.S.S.R."},
+    {10, "Dhalsim", "India"},
+    {11, "Sagat", "Thailand"},
+    {12, "M.Bison", "Thailand"}
+}
 
 characters.selected = 1
 
@@ -39,7 +38,7 @@ function characters.change()
     if characters.selected < 1 then
         characters.selected = my_game_settings.max_characters
     end
-    print("character selected : "..characters.selected)
+    print("character selected : "..characters.selected.." ("..characters.roster[characters.selected][2]..", "..characters.roster[characters.selected][3]..")")
 end
 
 return characters
