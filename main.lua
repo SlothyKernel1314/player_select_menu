@@ -11,6 +11,7 @@ love.graphics.setDefaultFilter("nearest")
 
 -- MODULES -------------------------------------------------------------------------------------------------------------
 
+local my_characters = require("characters")
 local my_character_selection_menu = require("character_selection_menu")
 
 -- LÖVE ----------------------------------------------------------------------------------------------------------------
@@ -27,6 +28,7 @@ end
 
   -- CONTROLS ------------------------------------------------------------------------------------------------------------
 function love.keypressed(key)
+    my_characters.change()
     if key=="escape" then love.event.quit() end
-    print(key)
+    print("key pressed : "..key)
 end
