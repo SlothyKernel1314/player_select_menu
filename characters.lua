@@ -21,22 +21,39 @@ characters.roster = {
 characters.selected = 1
 
 function characters.change()
-    -- TODO: selection bas et haut
-    --[[ if love.keyboard.isDown("up") or love.keyboard.isDown("z") then
+    if characters.selected <= 6 then
+        if love.keyboard.isDown("left") or love.keyboard.isDown("q") then
+            characters.selected = characters.selected - 1
+        end
+        if love.keyboard.isDown("right") or love.keyboard.isDown("d") then
+            characters.selected = characters.selected + 1
+        end
+        if love.keyboard.isDown("down") or love.keyboard.isDown("s")then
+            characters.selected = characters.selected + 6
+        end
+        if characters.selected > 6 and (love.keyboard.isDown("right") or love.keyboard.isDown("d")) then
+            characters.selected = 1
+        end
+        if characters.selected < 1 then
+            characters.selected = 6
+        end
     end
-    if love.keyboard.isDown("down") or love.keyboard.isDown("s") then
-    end ]]
-    if love.keyboard.isDown("left") or love.keyboard.isDown("q") then
-        characters.selected = characters.selected - 1
-    end
-    if love.keyboard.isDown("right") or love.keyboard.isDown("d") then
-        characters.selected = characters.selected + 1
-    end
-    if characters.selected > my_game_settings.max_characters then
-        characters.selected = 1
-    end
-    if characters.selected < 1 then
-        characters.selected = my_game_settings.max_characters
+    if characters.selected > 6 then
+        if love.keyboard.isDown("left") or love.keyboard.isDown("q") then
+            characters.selected = characters.selected - 1
+        end
+        if love.keyboard.isDown("right") or love.keyboard.isDown("d") then
+            characters.selected = characters.selected + 1
+        end
+        if love.keyboard.isDown("up") or love.keyboard.isDown("z")then
+            characters.selected = characters.selected - 6
+        end
+        if characters.selected > 12 and (love.keyboard.isDown("right") or love.keyboard.isDown("d")) then
+            characters.selected = 7
+        end
+        if characters.selected < 7 and (love.keyboard.isDown("left") or love.keyboard.isDown("q")) then
+            characters.selected = 12
+        end
     end
     print("character selected : "..characters.selected.." ("..characters.roster[characters.selected][2]..", "..characters.roster[characters.selected][3]..")")
 end
