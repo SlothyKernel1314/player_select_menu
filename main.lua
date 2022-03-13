@@ -17,7 +17,7 @@ love.graphics.setDefaultFilter("nearest")
 
 local my_game_settings = require("game_settings")
 local my_characters = require("characters")
-local my_character_selection_menu = require("character_selection_menu")
+local my_player_select_menu = require("player_select_menu")
 
 -- LÖVE ----------------------------------------------------------------------------------------------------------------
 
