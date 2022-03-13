@@ -3,23 +3,21 @@ local my_game_settings = require("game_settings")
 local characters = {}
 
 characters.roster = {}
+-- @param1 : rank
+-- @param2 : formatted menu name
+-- @param3 : country
 characters.roster.ryu = {1, "Ryu", "Japan"}
-characters.roster.ken = {2, "Ken Masters", "U.S.A."}
-characters.roster.honda = {3, "E. Honda", "Japan"}
-characters.roster.chunli = {4, "Chun Li", "China"}
-characters.roster.blanka = {5, "Blanka", "Brazil"}
-characters.roster.zangief = {6, "Zangief", "U.S.S.R."}
-characters.roster.guile = {7, "Guile", "U.S.A."}
-characters.roster.dhaslim = {8, "Dhaslim", "India"}
-characters.roster.hawk = {9, "T. Hawk", "Mexico"}
-characters.roster.cammy = {10, "Cammy", "England"}
-characters.roster.feilong = {11, "Fei Long", "Hong Kong"}
-characters.roster.deejay = {12, "Dee Jay", "Jamaica"}
-characters.roster.balrog = {13, "Balrog", "U.S.A."}
-characters.roster.vega = {14, "Vega", "Spain"}
-characters.roster.sagat = {15, "Sagat", "Thailand"}
-characters.roster.bison = {16, "M. Bison", "Thailand"}
-characters.roster.akuma = {17, "Akuma", "Japan"}
+characters.roster.honda = {2, "E.Honda", "Japan"}
+characters.roster.blanka = {3, "Blanka", "Brazil"}
+characters.roster.guile = {4, "Guile", "U.S.A."}
+characters.roster.balrog = {5, "Balrog", "U.S.A."}
+characters.roster.vega = {6, "Vega", "Spain"}
+characters.roster.ken = {7, "Ken", "U.S.A."}
+characters.roster.chunli = {8, "Chun Li", "China"}
+characters.roster.zangief = {9, "Zangief", "U.S.S.R."}
+characters.roster.dhalsim = {10, "Dhalsim", "India"}
+characters.roster.sagat = {11, "Sagat", "Thailand"}
+characters.roster.bison = {12, "M.Bison", "Thailand"}
 
 characters.selected = 1
 
