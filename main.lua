@@ -22,7 +22,7 @@ local my_player_select_menu = require("player_select_menu")
 -- LÖVE ----------------------------------------------------------------------------------------------------------------
 
 function love.load()
-    love.window.setTitle("Street Fighter character selection menu by IAmTerror")
+    love.window.setTitle("Street Fighter player select menu by IAmTerror")
 
     love.window.setMode(my_game_settings.screen_width * my_game_settings.scale_factor, my_game_settings.screen_height * my_game_settings.scale_factor)
 
