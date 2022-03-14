@@ -39,8 +39,8 @@ function love.draw()
     --                                  my_player_select_menu.background_color[3] / 255)
 
     my_player_select_menu.overlay_draw()
-
     my_player_select_menu.characters_box_selection_draw()
+    my_player_select_menu.selector_draw()
 end
 
 -- CONTROLS ------------------------------------------------------------------------------------------------------------
