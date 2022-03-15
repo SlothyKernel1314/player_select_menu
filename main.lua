@@ -8,16 +8,19 @@
 -- Street Fighter 2 Turbo Hyper Fighting (SNES) - World of Longplays : https://www.youtube.com/watch?v=8Usyp6OBAa8
 -- The Spriter Ressources - SF2 (SNES) Player Select tileset : https://www.spriters-resource.com/snes/streetfighteriistreetfighteriiturbo/sheet/5573/
 
+
 -- CONFIG --------------------------------------------------------------------------------------------------------------
 
 -- pixel art effect
 love.graphics.setDefaultFilter("nearest")
+
 
 -- MODULES -------------------------------------------------------------------------------------------------------------
 
 local my_game_settings = require("game_settings")
 local my_characters = require("characters")
 local my_player_select_menu = require("player_select_menu")
+
 
 -- LÖVE ----------------------------------------------------------------------------------------------------------------
 
@@ -28,6 +31,8 @@ function love.load()
 
     WIDTH = love.graphics.getWidth()
     HEIGHT = love.graphics.getHeight()
+
+    my_player_select_menu.load()
 end
 
 function love.update(dt)
@@ -43,7 +48,9 @@ function love.draw()
     my_player_select_menu.selector_draw()
 end
 
+
 -- CONTROLS ------------------------------------------------------------------------------------------------------------
+
 function love.keypressed(key)
     my_characters.change()
     if key=="escape" then love.event.quit() end
