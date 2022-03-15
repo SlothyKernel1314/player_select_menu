@@ -1,4 +1,9 @@
+-- MODULES -------------------------------------------------------------------------------------------------------------
+
 local my_game_settings = require("game_settings")
+
+
+-- PLAYER SELECT MENU ATTRIBUTES ---------------------------------------------------------------------------------------
 
 local player_select_menu = {}
 
@@ -8,7 +13,8 @@ player_select_menu.overlay = nil
 player_select_menu.characters_box_selection = nil
 player_select_menu.selector = nil
 
--- player_select_menu.background_color = {38, 0, 95} --"26005f"
+
+-- FUNCTIONS -----------------------------------------------------------------------------------------------------------
 
 function player_select_menu.main_tileset_load()
     player_select_menu.main_tileset = love.graphics.newImage("img/sf2_snes_player_select_tileset.png")
