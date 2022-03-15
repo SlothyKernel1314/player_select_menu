@@ -20,6 +20,10 @@ function player_select_menu.main_tileset_load()
     player_select_menu.main_tileset = love.graphics.newImage("img/sf2_snes_player_select_tileset.png")
 end
 
+function player_select_menu.main_tileset_2_load()
+    player_select_menu.main_tileset_2 = love.graphics.newImage("img/sf2_snes_player_select_tileset_2.png")
+end
+
 function player_select_menu.selector_tileset_load()
     player_select_menu.selector_tileset = love.graphics.newImage("img/sf2_snes_selector_tileset.png")
 end
@@ -32,9 +36,9 @@ function player_select_menu.overlay_load()
 end
 
 function player_select_menu.characters_box_selection_load()
-    player_select_menu.characters_box_selection = love.graphics.newQuad(30, 387,
-                                                                        96, 64,
-                                                                        player_select_menu.main_tileset:getDimensions())
+    player_select_menu.characters_box_selection = love.graphics.newQuad(110, 498,
+                                                                        121, 65,
+                                                                        player_select_menu.main_tileset_2:getDimensions())
 end
 
 function player_select_menu.selector_load()
@@ -51,7 +55,7 @@ function player_select_menu.overlay_draw()
 end
 
 function player_select_menu.characters_box_selection_draw()
-    love.graphics.draw(player_select_menu.main_tileset, player_select_menu.characters_box_selection,
+    love.graphics.draw(player_select_menu.main_tileset_2, player_select_menu.characters_box_selection,
                        80 * my_game_settings.scale_factor, 144 * my_game_settings.scale_factor,
                        nil,
                        my_game_settings.scale_factor, my_game_settings.scale_factor)
@@ -69,10 +73,17 @@ end
 
 function player_select_menu.load()
     player_select_menu.main_tileset_load()
+    player_select_menu.main_tileset_2_load()
     player_select_menu.selector_tileset_load()
     player_select_menu.overlay_load()
     player_select_menu.characters_box_selection_load()
     player_select_menu.selector_load()
+end
+
+function player_select_menu.draw()
+    player_select_menu.overlay_draw()
+    player_select_menu.characters_box_selection_draw()
+    player_select_menu.selector_draw()
 end
 
 return player_select_menu
