@@ -12,6 +12,15 @@ player_select_menu.background_color = {0, 0, 96} --"000060"
 player_select_menu.main_tileset = nil
 player_select_menu.selector_tileset = nil
 
+player_select_menu.upper_black_strip = {}
+player_select_menu.upper_black_strip.image = nil
+player_select_menu.upper_black_strip.x = 0
+player_select_menu.upper_black_strip.y = 0
+player_select_menu.lower_black_strip = {}
+player_select_menu.lower_black_strip.image = nil
+player_select_menu.lower_black_strip.x = 0
+player_select_menu.lower_black_strip.y = 215
+
 player_select_menu.characters_box_selection = {}
 player_select_menu.characters_box_selection.texture = nil
 player_select_menu.characters_box_selection.x = 80
@@ -34,6 +43,14 @@ end
 
 function player_select_menu.selector_tileset_load()
     player_select_menu.selector_tileset = love.graphics.newImage("img/sf2_snes_selector_tileset.png")
+end
+
+function player_select_menu.upper_black_strip_load()
+    player_select_menu.upper_black_strip.image = love.graphics.newImage("img/upper_black_strip.png")
+end
+
+function player_select_menu.lower_black_strip_load()
+    player_select_menu.lower_black_strip.image = love.graphics.newImage("img/lower_black_strip.png")
 end
 
 function player_select_menu.characters_box_selection_load()
@@ -79,18 +96,38 @@ function player_select_menu.world_map_draw()
                        my_game_settings.scale_factor, my_game_settings.scale_factor)
 end
 
+function player_select_menu.upper_black_strip_draw()
+    love.graphics.draw(player_select_menu.upper_black_strip.image,
+                       player_select_menu.upper_black_strip.x * my_game_settings.scale_factor,
+                       player_select_menu.upper_black_strip.y * my_game_settings.scale_factor,
+                       nil,
+                       my_game_settings.scale_factor, my_game_settings.scale_factor)
+end
+
+function player_select_menu.lower_black_strip_draw()
+    love.graphics.draw(player_select_menu.lower_black_strip.image,
+                       player_select_menu.lower_black_strip.x * my_game_settings.scale_factor,
+                       player_select_menu.lower_black_strip.y * my_game_settings.scale_factor,
+                       nil,
+                       my_game_settings.scale_factor, my_game_settings.scale_factor)
+end
+
 
 -- CALLBACKS -----------------------------------------------------------------------------------------------------------
 
 function player_select_menu.load()
     player_select_menu.main_tileset_load()
     player_select_menu.selector_tileset_load()
+    player_select_menu.upper_black_strip_load()
+    player_select_menu.lower_black_strip_load()
     player_select_menu.characters_box_selection_load()
     player_select_menu.selector_load()
     player_select_menu.world_map_load()
 end
 
 function player_select_menu.draw()
+    player_select_menu.upper_black_strip_draw()
+    player_select_menu.lower_black_strip_draw()
     player_select_menu.characters_box_selection_draw()
     player_select_menu.selector_draw()
     player_select_menu.world_map_draw()
