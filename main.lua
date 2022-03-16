@@ -39,6 +39,9 @@ function love.update(dt)
 end
 
 function love.draw()
+    love.graphics.setBackgroundColor(my_player_select_menu.background_color[1] / 255,
+                                     my_player_select_menu.background_color[2] / 255,
+                                     my_player_select_menu.background_color[3] / 255)
     my_player_select_menu.draw()
 end
 

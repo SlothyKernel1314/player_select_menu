@@ -7,6 +7,8 @@ local my_game_settings = require("game_settings")
 
 local player_select_menu = {}
 
+player_select_menu.background_color = {0, 0, 96} --"000060"
+
 player_select_menu.main_tileset = nil
 player_select_menu.selector_tileset = nil
 
