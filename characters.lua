@@ -1,6 +1,7 @@
 local characters = {}
 
 local my_player_select_menu = require("player_select_menu")
+local my_sfx = require("sfx")
 
 characters.roster = {
     -- @param1 : rank, @param2 : character name, @param3 : country
@@ -25,44 +26,64 @@ function characters.change()
         if love.keyboard.isDown("left") or love.keyboard.isDown("q") then
             characters.selected = characters.selected - 1
             my_player_select_menu.selector.x = my_player_select_menu.selector.x - 20
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
         if love.keyboard.isDown("right") or love.keyboard.isDown("d") then
             characters.selected = characters.selected + 1
             my_player_select_menu.selector.x = my_player_select_menu.selector.x + 20
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
         if love.keyboard.isDown("down") or love.keyboard.isDown("s")then
             characters.selected = characters.selected + 6
             my_player_select_menu.selector.y = my_player_select_menu.selector.y + 32
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
         if characters.selected > 6 and (love.keyboard.isDown("right") or love.keyboard.isDown("d")) then
             characters.selected = 1
             my_player_select_menu.selector.x = 80
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
         if characters.selected < 1 then
             characters.selected = 6
             my_player_select_menu.selector.x = 180
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
     end
     if characters.selected > 6 then
         if love.keyboard.isDown("left") or love.keyboard.isDown("q") then
             characters.selected = characters.selected - 1
             my_player_select_menu.selector.x = my_player_select_menu.selector.x - 20
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
         if love.keyboard.isDown("right") or love.keyboard.isDown("d") then
             characters.selected = characters.selected + 1
             my_player_select_menu.selector.x = my_player_select_menu.selector.x + 20
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
         if love.keyboard.isDown("up") or love.keyboard.isDown("z")then
             characters.selected = characters.selected - 6
             my_player_select_menu.selector.y = my_player_select_menu.selector.y - 32
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
         if characters.selected > 12 and (love.keyboard.isDown("right") or love.keyboard.isDown("d")) then
             characters.selected = 7
             my_player_select_menu.selector.x = 80
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
         if characters.selected < 7 and (love.keyboard.isDown("left") or love.keyboard.isDown("q")) then
             characters.selected = 12
             my_player_select_menu.selector.x = 180
+            my_sfx.move_selector:stop()
+            my_sfx.move_selector:play()
         end
     end
     print("character selected : "..characters.selected.." ("..characters.roster[characters.selected][2]..", "..characters.roster[characters.selected][3]..")")
