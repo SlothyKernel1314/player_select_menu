@@ -33,6 +33,7 @@ function love.load()
     HEIGHT = love.graphics.getHeight()
 
     my_player_select_menu.load()
+    my_characters.load()
 end
 
 function love.update(dt)

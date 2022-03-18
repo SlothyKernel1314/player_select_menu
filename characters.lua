@@ -5,21 +5,36 @@ local my_sfx = require("sfx")
 
 characters.roster = {
     -- @param1 : rank, @param2 : character name, @param3 : country
-    {1, "Ryu", "Japan"},
-    {2, "E.Honda", "Japan"},
-    {3, "Blanka", "Brazil"},
-    {4, "Guile", "U.S.A."},
-    {5, "Balrog", "U.S.A."},
-    {6, "Vega", "Spain"},
-    {7, "Ken", "U.S.A."},
-    {8, "Chun Li", "China"},
-    {9, "Zangief", "U.S.S.R."},
-    {10, "Dhalsim", "India"},
-    {11, "Sagat", "Thailand"},
-    {12, "M.Bison", "Thailand"}
+    -- @param4 : x coordinate tileset, @param5 : y coordinate tileset
+    -- TODO: alternate stickers
+    {1, "Ryu", "Japan", 15, 0},
+    {2, "E.Honda", "Japan", 284, 0},
+    {3, "Blanka", "Brazil", 562, 0},
+    {4, "Guile", "U.S.A.", 830, 0},
+    {5, "Balrog", "U.S.A.", 1097, 0},
+    {6, "Vega", "Spain", 1373, 0},
+    {7, "Ken", "U.S.A.", 13, 226},
+    {8, "Chun Li", "China", 279, 226},
+    {9, "Zangief", "U.S.S.R.", 565, 226},
+    {10, "Dhalsim", "India", 832, 226},
+    {11, "Sagat", "Thailand"; 1099, 226},
+    {12, "M.Bison", "Thailand", 1371, 226}
 }
 
 characters.selected = 1
+
+characters.stickers = {}
+characters.stickers.width = 56
+characters.stickers.height = 86
+characters.stickers.textures = {}
+
+function characters.stickers_load()
+    for i = 1, 12, 1 do
+        characters.stickers.textures[i] = love.graphics.newQuad(characters.roster[i][4], characters.roster[i][5],
+                                                                characters.stickers.width, characters.stickers.height,
+                                                                my_player_select_menu.main_tileset:getDimensions())
+    end
+end
 
 function characters.change()
     if characters.selected <= 6 then
@@ -77,6 +92,10 @@ function characters.change()
         end
     end
     print("character selected : "..characters.selected.." ("..characters.roster[characters.selected][2]..", "..characters.roster[characters.selected][3]..")")
+end
+
+function characters.load()
+    characters.stickers_load()
 end
 
 return characters
