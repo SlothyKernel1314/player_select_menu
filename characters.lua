@@ -1,7 +1,12 @@
-local characters = {}
+-- MODULES -------------------------------------------------------------------------------------------------------------
 
 local my_player_select_menu = require("player_select_menu")
 local my_sfx = require("sfx")
+
+
+-- CHARACTERS ATTRIBUTES -----------------------------------------------------------------------------------------------
+
+local characters = {}
 
 characters.roster = {
     -- @param1 : rank, @param2 : character name, @param3 : country
@@ -27,6 +32,9 @@ characters.stickers = {}
 characters.stickers.width = 56
 characters.stickers.height = 86
 characters.stickers.textures = {}
+
+
+-- FUNCTIONS -----------------------------------------------------------------------------------------------------------
 
 function characters.stickers_load()
     for i = 1, 12, 1 do
@@ -93,6 +101,9 @@ function characters.change()
     end
     print("character selected : "..characters.selected.." ("..characters.roster[characters.selected][2]..", "..characters.roster[characters.selected][3]..")")
 end
+
+
+-- CALLBACKS -----------------------------------------------------------------------------------------------------------
 
 function characters.load()
     characters.stickers_load()
