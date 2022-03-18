@@ -44,6 +44,7 @@ function love.draw()
                                      my_player_select_menu.background_color[2] / 255,
                                      my_player_select_menu.background_color[3] / 255)
     my_player_select_menu.draw()
+    my_characters.draw()
 end
 
 

@@ -1,7 +1,8 @@
 -- MODULES -------------------------------------------------------------------------------------------------------------
 
-local my_player_select_menu = require("player_select_menu")
+local my_game_settings = require("game_settings")
 local my_sfx = require("sfx")
+local my_player_select_menu = require("player_select_menu")
 
 
 -- CHARACTERS ATTRIBUTES -----------------------------------------------------------------------------------------------
@@ -31,6 +32,8 @@ characters.selected = 1
 characters.stickers = {}
 characters.stickers.width = 56
 characters.stickers.height = 86
+characters.stickers.x = 8
+characters.stickers.y = 129
 characters.stickers.textures = {}
 
 
@@ -42,6 +45,14 @@ function characters.stickers_load()
                                                                 characters.stickers.width, characters.stickers.height,
                                                                 my_player_select_menu.main_tileset:getDimensions())
     end
+end
+
+function characters.stickers_draw(current_character_selected_id)
+    love.graphics.draw(my_player_select_menu.main_tileset, characters.stickers.textures[current_character_selected_id],
+                       characters.stickers.x * my_game_settings.scale_factor,
+                       characters.stickers.y * my_game_settings.scale_factor,
+                       nil,
+                       my_game_settings.scale_factor, my_game_settings.scale_factor)
 end
 
 function characters.change()
@@ -107,6 +118,10 @@ end
 
 function characters.load()
     characters.stickers_load()
+end
+
+function characters.draw()
+    characters.stickers_draw(characters.selected)
 end
 
 return characters
