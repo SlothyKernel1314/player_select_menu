@@ -23,11 +23,11 @@ player_select_menu.lower_black_strip.y = 215
 
 player_select_menu.characters_box_selection = {}
 player_select_menu.characters_box_selection.texture = nil
-player_select_menu.characters_box_selection.x = 80
+player_select_menu.characters_box_selection.x = 70
 player_select_menu.characters_box_selection.y = 143
 player_select_menu.selector = {}
 player_select_menu.selector.texture = nil
-player_select_menu.selector.x = 80
+player_select_menu.selector.x = 70
 player_select_menu.selector.y = 140
 player_select_menu.world_map = {}
 player_select_menu.world_map.texture = nil

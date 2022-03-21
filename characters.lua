@@ -101,12 +101,12 @@ function characters.change()
         end
         if characters.selected > 6 and (love.keyboard.isDown("right") or love.keyboard.isDown("d")) then
             characters.selected = 1
-            my_player_select_menu.selector.x = 80
+            my_player_select_menu.selector.x = 70
             my_sfx.menu_selector_play()
         end
         if characters.selected < 1 then
             characters.selected = 6
-            my_player_select_menu.selector.x = 180
+            my_player_select_menu.selector.x = 170
             my_sfx.menu_selector_play()
         end
     end
@@ -128,12 +128,12 @@ function characters.change()
         end
         if characters.selected > 12 and (love.keyboard.isDown("right") or love.keyboard.isDown("d")) then
             characters.selected = 7
-            my_player_select_menu.selector.x = 80
+            my_player_select_menu.selector.x = 70
             my_sfx.menu_selector_play()
         end
         if characters.selected < 7 and (love.keyboard.isDown("left") or love.keyboard.isDown("q")) then
             characters.selected = 12
-            my_player_select_menu.selector.x = 180
+            my_player_select_menu.selector.x = 170
             my_sfx.menu_selector_play()
         end
     end
