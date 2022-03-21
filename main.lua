@@ -7,6 +7,7 @@
 -- Street Fighter Wiki - Street Fighter 2 The World Warrior : https://streetfighter.fandom.com/wiki/Street_Fighter_II:_The_World_Warrior
 -- Street Fighter 2 Turbo Hyper Fighting (SNES) - World of Longplays : https://www.youtube.com/watch?v=8Usyp6OBAa8
 -- The Spriter Ressources - SF2 (SNES) Player Select tilesets : https://www.spriters-resource.com/snes/streetfighteriistreetfighteriiturbo/
+-- The Spriter Ressources - SF2 (SNES) sounds : https://www.sounds-resource.com/snes/streetfighteriistreetfighteriiturbo/sound/34143/
 
 
 -- CONFIG --------------------------------------------------------------------------------------------------------------
