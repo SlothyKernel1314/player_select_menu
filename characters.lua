@@ -38,6 +38,12 @@ characters.stickers.x = 8
 characters.stickers.y = 129
 characters.stickers.textures = {}
 
+characters.country_name = {}
+characters.country_name.height = 13
+characters.country_name.x = 8
+characters.country_name.y = 118
+characters.country_name.textures = {}
+
 
 -- FUNCTIONS -----------------------------------------------------------------------------------------------------------
 
@@ -49,10 +55,26 @@ function characters.stickers_load()
     end
 end
 
+function characters.country_name_load()
+    for i = 1, 12, 1 do
+        characters.country_name.textures[i] = love.graphics.newQuad(characters.roster[i][8], characters.roster[i][9],
+                                                                characters.roster[i][10], characters.country_name.height,
+                                                                my_player_select_menu.main_tileset:getDimensions())
+    end
+end
+
 function characters.stickers_draw(current_character_selected_id)
     love.graphics.draw(my_player_select_menu.main_tileset, characters.stickers.textures[current_character_selected_id],
                        characters.stickers.x * my_game_settings.scale_factor,
                        characters.stickers.y * my_game_settings.scale_factor,
+                       nil,
+                       my_game_settings.scale_factor, my_game_settings.scale_factor)
+end
+
+function characters.country_name_draw(current_character_selected_id)
+    love.graphics.draw(my_player_select_menu.main_tileset, characters.country_name.textures[current_character_selected_id],
+                       characters.country_name.x * my_game_settings.scale_factor,
+                       characters.country_name.y * my_game_settings.scale_factor,
                        nil,
                        my_game_settings.scale_factor, my_game_settings.scale_factor)
 end
@@ -120,10 +142,12 @@ end
 
 function characters.load()
     characters.stickers_load()
+    characters.country_name_load()
 end
 
 function characters.draw()
     characters.stickers_draw(characters.selected)
+    characters.country_name_draw(characters.selected)
 end
 
 return characters

@@ -32,7 +32,7 @@ player_select_menu.selector.y = 140
 player_select_menu.world_map = {}
 player_select_menu.world_map.texture = nil
 player_select_menu.world_map.x = 39
-player_select_menu.world_map.y = 39
+player_select_menu.world_map.y = 36
 
 
 -- FUNCTIONS -----------------------------------------------------------------------------------------------------------
