@@ -11,20 +11,22 @@ local characters = {}
 
 characters.roster = {
     -- @param1 : rank, @param2 : character name, @param3 : country
-    -- @param4 : x coordinate tileset, @param5 : y coordinate tileset
+    -- @param4 : x sticker coordinate tileset, @param5 : y sticker coordinate tileset
+    -- @param6 : x alernate sticker coordinate tileset, @param7 : y alternate sticker coordinate tileset
+    -- @param8 : x country name coordinate tileset, @param9 : y country name coordinate tileset, @param10 : width of the country name quad
     -- TODO: alternate stickers
-    {1, "Ryu", "Japan", 15, 0},
-    {2, "E.Honda", "Japan", 284, 0},
-    {3, "Blanka", "Brazil", 562, 0},
-    {4, "Guile", "U.S.A.", 830, 0},
-    {5, "Balrog", "U.S.A.", 1097, 0},
-    {6, "Vega", "Spain", 1373, 0},
-    {7, "Ken", "U.S.A.", 13, 226},
-    {8, "Chun Li", "China", 279, 226},
-    {9, "Zangief", "U.S.S.R.", 565, 226},
-    {10, "Dhalsim", "India", 832, 226},
-    {11, "Sagat", "Thailand"; 1099, 226},
-    {12, "M.Bison", "Thailand", 1371, 226}
+    {1, "Ryu", "Japan", 15, 0, nil, nil, 86, 94, 30},
+    {2, "E.Honda", "Japan", 284, 0, nil, nil, 354, 95, 56},
+    {3, "Blanka", "Brazil", 562, 0, nil, nil, 630, 95, 56},
+    {4, "Guile", "U.S.A.", 830, 0, nil, nil, 904, 95, 43},
+    {5, "Balrog", "U.S.A.", 1097, 0, nil, nil, 1167, 95, 56},
+    {6, "Vega", "Spain", 1373, 0, nil, nil, 1452, 95, 39},
+    {7, "Ken", "U.S.A.", 13, 226, nil, nil, 95, 316, 30, 13},
+    {8, "Chun Li", "China", 279, 226, nil, nil, 351, 316, 56},
+    {9, "Zangief", "U.S.S.R.", 565, 226, nil, nil, 628, 314, 56},
+    {10, "Dhalsim", "India", 832, 226, nil, nil, 896, 314, 62},
+    {11, "Sagat", "Thailand"; 1099, 226, nil, nil, 1170, 315, 46},
+    {12, "M.Bison", "Thailand", 1371, 226, nil, nil, 1442, 314, 56}
 }
 
 characters.selected = 1
