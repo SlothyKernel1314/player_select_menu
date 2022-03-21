@@ -40,7 +40,8 @@ characters.stickers.textures = {}
 
 characters.country_name = {}
 characters.country_name.height = 13
-characters.country_name.x = 8
+-- offsetting country name texture the origin to the width center, relative to the width center of character sticker
+characters.country_name.x = 8 + (characters.stickers.width / 2)
 characters.country_name.y = 118
 characters.country_name.textures = {}
 
@@ -76,7 +77,9 @@ function characters.country_name_draw(current_character_selected_id)
                        characters.country_name.x * my_game_settings.scale_factor,
                        characters.country_name.y * my_game_settings.scale_factor,
                        nil,
-                       my_game_settings.scale_factor, my_game_settings.scale_factor)
+                       my_game_settings.scale_factor, my_game_settings.scale_factor,
+                       -- offsetting country name texture the origin to the width center, relative to the width center of character sticker
+                       characters.roster[current_character_selected_id][10] / 2, 0)
 end
 
 function characters.change()
