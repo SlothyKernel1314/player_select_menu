@@ -22,7 +22,7 @@ characters.roster = {
     {4, "Guile", "U.S.A.", 830, 0, nil, nil, 904, 95, 43, 2},
     {5, "Balrog", "U.S.A.", 1097, 0, nil, nil, 1167, 95, 56, 2},
     {6, "Vega", "Spain", 1373, 0, nil, nil, 1452, 95, 39, 4},
-    {7, "Ken", "U.S.A.", 13, 226, nil, nil, 95, 316, 30, 13, 2},
+    {7, "Ken", "U.S.A.", 13, 226, nil, nil, 95, 316, 30, 2},
     {8, "Chun Li", "China", 279, 226, nil, nil, 351, 316, 56, 6},
     {9, "Zangief", "U.S.S.R.", 565, 226, nil, nil, 628, 314, 56, 3},
     {10, "Dhalsim", "India", 832, 226, nil, nil, 896, 314, 62, 7},

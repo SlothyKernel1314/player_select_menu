@@ -21,6 +21,7 @@ love.graphics.setDefaultFilter("nearest")
 local my_game_settings = require("game_settings")
 local my_characters = require("characters")
 local my_player_select_menu = require("player_select_menu")
+local my_flags = require("flags")
 
 
 -- LÖVE ----------------------------------------------------------------------------------------------------------------
@@ -35,6 +36,7 @@ function love.load()
 
     my_player_select_menu.load()
     my_characters.load()
+    my_flags.load()
 end
 
 function love.update(dt)
@@ -46,6 +48,7 @@ function love.draw()
                                      my_player_select_menu.background_color[3] / 255)
     my_player_select_menu.draw()
     my_characters.draw()
+    my_flags.draw()
 end
 
 

@@ -1,6 +1,9 @@
 -- MODULES -------------------------------------------------------------------------------------------------------------
 
 local my_game_settings = require("game_settings")
+local my_characters = require("characters")
+local my_player_select_menu = require("player_select_menu")
+
 
 
 -- CHARACTERS ATTRIBUTES -----------------------------------------------------------------------------------------------
@@ -27,17 +30,32 @@ flags.graphics.height = 22
 flags.graphics.textures = {}
 
 
-
 -- FUNCTIONS -----------------------------------------------------------------------------------------------------------
 
+function flags.graphics_load()
+    for i = 1, 8, 1 do
+        flags.graphics.textures[i] = love.graphics.newQuad(flags.data[i][3], flags.data[i][4],
+                                                           flags.graphics.width, flags.graphics.height,
+                                                           my_player_select_menu.main_tileset:getDimensions())
+    end
+end
 
+function flags.graphics_draw(flag_id)
+    love.graphics.draw(my_player_select_menu.main_tileset, flags.graphics.textures[flag_id],
+                       10 * my_game_settings.scale_factor,
+                       10 * my_game_settings.scale_factor,
+                       nil,
+                       my_game_settings.scale_factor, my_game_settings.scale_factor)
+end
 
 -- CALLBACKS -----------------------------------------------------------------------------------------------------------
 
 function flags.load()
+    flags.graphics_load()
 end
 
 function flags.draw()
+    flags.graphics_draw(my_characters.roster[my_characters.selected][11])
 end
 
 return flags
