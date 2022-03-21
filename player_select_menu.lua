@@ -25,14 +25,21 @@ player_select_menu.characters_box_selection = {}
 player_select_menu.characters_box_selection.texture = nil
 player_select_menu.characters_box_selection.x = 70
 player_select_menu.characters_box_selection.y = 143
+
 player_select_menu.selector = {}
 player_select_menu.selector.texture = nil
 player_select_menu.selector.x = 70
 player_select_menu.selector.y = 140
+
 player_select_menu.world_map = {}
 player_select_menu.world_map.texture = nil
 player_select_menu.world_map.x = 39
 player_select_menu.world_map.y = 36
+
+player_select_menu.player_one = {}
+player_select_menu.player_one.texture = nil
+player_select_menu.player_one.x = 25
+player_select_menu.player_one.y = 102
 
 
 -- FUNCTIONS -----------------------------------------------------------------------------------------------------------
@@ -68,8 +75,14 @@ end
 
 function player_select_menu.world_map_load()
     player_select_menu.world_map.texture = love.graphics.newQuad(279, 492,
-                                                                169, 92,
-                                                                player_select_menu.main_tileset:getDimensions())
+                                                                 169, 92,
+                                                                 player_select_menu.main_tileset:getDimensions())
+end
+
+function player_select_menu.player_one_load()
+    player_select_menu.player_one.texture = love.graphics.newQuad(111, 474,
+                                                                  19, 12,
+                                                                  player_select_menu.main_tileset:getDimensions())
 end
 
 function player_select_menu.characters_box_selection_draw()
@@ -112,6 +125,14 @@ function player_select_menu.lower_black_strip_draw()
                        my_game_settings.scale_factor, my_game_settings.scale_factor)
 end
 
+function player_select_menu.player_one_draw()
+    love.graphics.draw(player_select_menu.main_tileset, player_select_menu.player_one.texture,
+                       player_select_menu.player_one.x * my_game_settings.scale_factor,
+                       player_select_menu.player_one.y * my_game_settings.scale_factor,
+                       nil,
+                       my_game_settings.scale_factor, my_game_settings.scale_factor)
+end
+
 
 -- CALLBACKS -----------------------------------------------------------------------------------------------------------
 
@@ -123,6 +144,7 @@ function player_select_menu.load()
     player_select_menu.characters_box_selection_load()
     player_select_menu.selector_load()
     player_select_menu.world_map_load()
+    player_select_menu.player_one_load()
 end
 
 function player_select_menu.draw()
@@ -131,6 +153,7 @@ function player_select_menu.draw()
     player_select_menu.characters_box_selection_draw()
     player_select_menu.selector_draw()
     player_select_menu.world_map_draw()
+    player_select_menu.player_one_draw()
 end
 
 return player_select_menu
