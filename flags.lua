@@ -35,7 +35,8 @@ flags.screen_position = {
     {8, "U.S.A.", 157, 46},
     {9, "Brazil", 174, 96},
     {10, "U.S.A. bis", 183, 38},
-    {11, "U.S.A. ter", 186, 70}
+    {11, "U.S.A. ter", 186, 70},
+    {11, "void (Bison)", -20, -20}
 }
 
 flags.graphics = {}

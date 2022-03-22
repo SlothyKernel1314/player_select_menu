@@ -27,7 +27,7 @@ characters.roster = {
     {9, "Zangief", "U.S.S.R.", 565, 226, nil, nil, 628, 314, 56, 3, 2},
     {10, "Dhalsim", "India", 832, 226, nil, nil, 896, 314, 62, 7, 3},
     {11, "Sagat", "Thailand"; 1099, 226, nil, nil, 1170, 315, 46, 8, 4},
-    {12, "M.Bison", "Thailand", 1371, 226, nil, nil, 1442, 314, 56, 8, 4}
+    {12, "M.Bison", "Thailand", 1371, 226, nil, nil, 1442, 314, 56, 8, 12}
 }
 
 characters.selected = 1
