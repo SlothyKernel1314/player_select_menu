@@ -25,17 +25,17 @@ flags.data = {
 flags.screen_position = {
     -- @param1 : id (rank)
     -- @param2 : x flag screen position, @param3 : y flag screen position
-    {1, "Spain", 100, 100},
-    {2, "U.S.S.R.", 10, 10},
-    {3, "India", 10, 10},
-    {4, "Thailand", 10, 10},
-    {5, "China", 10, 10},
-    {6, "Japan", 10, 10},
-    {7, "Japan bis", 10, 10},
-    {8, "U.S.A.", 10, 10},
-    {9, "Brazil", 10, 10},
-    {10, "U.S.A. bis", 10, 10},
-    {11, "U.S.A. ter", 10, 10}
+    {1, "Spain", 39, 38},
+    {2, "U.S.S.R.", 72, 46},
+    {3, "India", 76, 74},
+    {4, "Thailand", 103, 92},
+    {5, "China", 108, 44},
+    {6, "Japan", 126, 80},
+    {7, "Japan bis", 134, 54},
+    {8, "U.S.A.", 157, 46},
+    {9, "Brazil", 174, 96},
+    {10, "U.S.A. bis", 183, 38},
+    {11, "U.S.A. ter", 186, 70}
 }
 
 flags.graphics = {}
