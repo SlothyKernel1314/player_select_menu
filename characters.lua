@@ -14,20 +14,20 @@ characters.roster = {
     -- @param4 : x sticker coordinate tileset, @param5 : y sticker coordinate tileset
     -- @param6 : x alernate sticker coordinate tileset, @param7 : y alternate sticker coordinate tileset
     -- @param8 : x country name coordinate tileset, @param9 : y country name coordinate tileset, @param10 : width of the country name quad
-    -- @param11 : flag id
+    -- @param11 : flag id, @param12 : current screen position flag id
     -- TODO: alternate stickers
-    {1, "Ryu", "Japan", 15, 0, nil, nil, 86, 94, 30, 1},
-    {2, "E.Honda", "Japan", 284, 0, nil, nil, 354, 95, 56, 1},
-    {3, "Blanka", "Brazil", 562, 0, nil, nil, 630, 95, 56, 5},
-    {4, "Guile", "U.S.A.", 830, 0, nil, nil, 904, 95, 43, 2},
-    {5, "Balrog", "U.S.A.", 1097, 0, nil, nil, 1167, 95, 56, 2},
-    {6, "Vega", "Spain", 1373, 0, nil, nil, 1452, 95, 39, 4},
-    {7, "Ken", "U.S.A.", 13, 226, nil, nil, 95, 316, 30, 2},
-    {8, "Chun Li", "China", 279, 226, nil, nil, 351, 316, 56, 6},
-    {9, "Zangief", "U.S.S.R.", 565, 226, nil, nil, 628, 314, 56, 3},
-    {10, "Dhalsim", "India", 832, 226, nil, nil, 896, 314, 62, 7},
-    {11, "Sagat", "Thailand"; 1099, 226, nil, nil, 1170, 315, 46, 8},
-    {12, "M.Bison", "Thailand", 1371, 226, nil, nil, 1442, 314, 56, 8}
+    {1, "Ryu", "Japan", 15, 0, nil, nil, 86, 94, 30, 1, 6},
+    {2, "E.Honda", "Japan", 284, 0, nil, nil, 354, 95, 56, 1, 7},
+    {3, "Blanka", "Brazil", 562, 0, nil, nil, 630, 95, 56, 5, 9},
+    {4, "Guile", "U.S.A.", 830, 0, nil, nil, 904, 95, 43, 2, 11},
+    {5, "Balrog", "U.S.A.", 1097, 0, nil, nil, 1167, 95, 56, 2, 8},
+    {6, "Vega", "Spain", 1373, 0, nil, nil, 1452, 95, 39, 4, 1},
+    {7, "Ken", "U.S.A.", 13, 226, nil, nil, 95, 316, 30, 2, 10},
+    {8, "Chun Li", "China", 279, 226, nil, nil, 351, 316, 56, 6, 5},
+    {9, "Zangief", "U.S.S.R.", 565, 226, nil, nil, 628, 314, 56, 3, 2},
+    {10, "Dhalsim", "India", 832, 226, nil, nil, 896, 314, 62, 7, 3},
+    {11, "Sagat", "Thailand"; 1099, 226, nil, nil, 1170, 315, 46, 8, 4},
+    {12, "M.Bison", "Thailand", 1371, 226, nil, nil, 1442, 314, 56, 8, 4}
 }
 
 characters.selected = 1
