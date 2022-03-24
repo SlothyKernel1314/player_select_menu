@@ -31,7 +31,7 @@ Sprites and songs are the property of their respective owners.
 
 <p align="center">
 
-  <img src="https://raw.githubusercontent.com/IAmTerror/player_select_menu/master/misc/sf4_bison.png?token=GHSAT0AAAAAABSGL6VJ37KFCFQY4HHMHZP6YR475NQ" />
+  <img src="https://raw.githubusercontent.com/IAmTerror/player_select_menu/master/misc/sf4_bison.png?token=GHSAT0AAAAAABSGL6VJ37KFCFQY4HHMHZP6YR475NQ">
 
   *For you, the bug graced your game was the most important thing in your life, but for me ? It was a feature...*
 
