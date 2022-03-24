@@ -41,6 +41,11 @@ player_select_menu.player_one.texture = nil
 player_select_menu.player_one.x = 25
 player_select_menu.player_one.y = 102
 
+player_select_menu.pselec_header = {}
+player_select_menu.pselec_header.texture = nil
+player_select_menu.pselec_header.x = 72
+player_select_menu.pselec_header.y = 29
+
 
 -- FUNCTIONS -----------------------------------------------------------------------------------------------------------
 
@@ -83,6 +88,12 @@ function player_select_menu.player_one_load()
     player_select_menu.player_one.texture = love.graphics.newQuad(111, 474,
                                                                   19, 12,
                                                                   player_select_menu.main_tileset:getDimensions())
+end
+
+function player_select_menu.pselec_header_load()
+    player_select_menu.pselec_header.texture = love.graphics.newQuad(479, 479,
+                                                                     112, 12,
+                                                                     player_select_menu.main_tileset:getDimensions())
 end
 
 function player_select_menu.characters_box_selection_draw()
@@ -133,6 +144,14 @@ function player_select_menu.player_one_draw()
                        my_game_settings.scale_factor, my_game_settings.scale_factor)
 end
 
+function player_select_menu.pselec_header_draw()
+    love.graphics.draw(player_select_menu.main_tileset, player_select_menu.pselec_header.texture,
+                       player_select_menu.pselec_header.x * my_game_settings.scale_factor,
+                       player_select_menu.pselec_header.y * my_game_settings.scale_factor,
+                       nil,
+                       my_game_settings.scale_factor, my_game_settings.scale_factor)
+end
+
 
 -- CALLBACKS -----------------------------------------------------------------------------------------------------------
 
@@ -145,6 +164,7 @@ function player_select_menu.load()
     player_select_menu.selector_load()
     player_select_menu.world_map_load()
     player_select_menu.player_one_load()
+    player_select_menu.pselec_header_load()
 end
 
 function player_select_menu.draw()
@@ -154,6 +174,7 @@ function player_select_menu.draw()
     player_select_menu.selector_draw()
     player_select_menu.world_map_draw()
     player_select_menu.player_one_draw()
+    player_select_menu.pselec_header_draw()
 end
 
 return player_select_menu
