@@ -23,4 +23,10 @@ Sprites and songs are the property of their respective owners.
 
 * out of bounds of the character selector by randomly and repeatedly pressing the directional keys very quickly
 
-*For you, the bug graced your game was the most important thing in your life, but for me ? It was a feature...*
+<p align="center">
+
+  <img src="https://raw.githubusercontent.com/IAmTerror/player_select_menu/master/misc/sf4_bison.png?token=GHSAT0AAAAAABSGL6VJ37KFCFQY4HHMHZP6YR475NQ" />
+
+  *For you, the bug graced your game was the most important thing in your life, but for me ? It was a feature...*
+
+</p>
