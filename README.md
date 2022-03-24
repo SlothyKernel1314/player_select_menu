@@ -8,5 +8,19 @@ Player Select Menu is a personal project aiming at implement the Player Select M
 
 * management of alternative costumes for each character
 * selector flicker implementation (with shaders ?)
-* the little plane... :heart_eyes: and the nightmarish implementation of the coordinates... :sob:
+* the little plane... :heart_eyes: and the nightmarish implementation of the coordinates... :sob: (enfin, j'ai surtout la flemme...)
 * implementation of the entire pre-game sequence : editor's logo, start menu, presentation of the two selected characters... 
+
+## Licence
+
+This project is licensed under the GPL-3.0 License. You can freely fork this project, study it, modify it, etc. If you want to publish your own fork, you must publish the source code of this one, under the same GPL-3.0 License.
+
+Crediting the original author of the project (me) is not formally required, but it would obviously make me happy. :)
+
+Sprites and songs are the property of their respective owners.
+
+## Issues / Bugs
+
+* out of bounds of the character selector by randomly and repeatedly pressing the directional keys very quickly
+
+*For you, the bug graced your game was the most important thing in your life, but for me ? It was a feature...*
