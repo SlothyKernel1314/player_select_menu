@@ -22,6 +22,7 @@ local my_game_settings = require("game_settings")
 local my_characters = require("characters")
 local my_player_select_menu = require("player_select_menu")
 local my_flags = require("flags")
+local my_snd = require("snd")
 
 
 -- LÖVE ----------------------------------------------------------------------------------------------------------------
@@ -40,6 +41,9 @@ function love.load()
 end
 
 function love.update(dt)
+    if not my_snd.character_select:isPlaying() then
+		love.audio.play(my_snd.character_select)
+	end
 end
 
 function love.draw()

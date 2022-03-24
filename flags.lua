@@ -10,8 +10,8 @@ local my_player_select_menu = require("player_select_menu")
 local flags = {}
 
 flags.data = {
-    -- @param1 : id (rank), @param2 : country
-    -- @param3 : x flag coordinate tileset, @param4 : y flag coordinate tileset
+    -- @var1 : id (rank), @var2 : country
+    -- @var3 : x flag coordinate tileset, @var4 : y flag coordinate tileset
     {1, "Japan", 477, 499},
     {2, "U.S.A.", 513, 499},
     {3, "U.S.S.R.", 549, 499},
@@ -23,8 +23,8 @@ flags.data = {
 }
 
 flags.screen_position = {
-    -- @param1 : id (rank)
-    -- @param2 : x flag screen position, @param3 : y flag screen position
+    -- @var1 : id (rank)
+    -- @var2 : x flag screen position, @var3 : y flag screen position
     {1, "Spain", 39, 38},
     {2, "U.S.S.R.", 72, 46},
     {3, "India", 76, 74},

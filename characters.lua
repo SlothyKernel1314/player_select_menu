@@ -10,11 +10,11 @@ local my_player_select_menu = require("player_select_menu")
 local characters = {}
 
 characters.roster = {
-    -- @param1 : id (rank), @param2 : character name, @param3 : country
-    -- @param4 : x sticker coordinate tileset, @param5 : y sticker coordinate tileset
-    -- @param6 : x alernate sticker coordinate tileset, @param7 : y alternate sticker coordinate tileset
-    -- @param8 : x country name coordinate tileset, @param9 : y country name coordinate tileset, @param10 : width of the country name quad
-    -- @param11 : flag id, @param12 : current screen position flag id
+    -- @var1 : id (rank), @var2 : character name, @var3 : country
+    -- @var4 : x sticker coordinate tileset, @var5 : y sticker coordinate tileset
+    -- @var6 : x alernate sticker coordinate tileset, @var7 : y alternate sticker coordinate tileset
+    -- @var8 : x country name coordinate tileset, @var9 : y country name coordinate tileset, @var10 : width of the country name quad
+    -- @var11 : flag id, @var12 : current screen position flag id
     -- TODO: alternate stickers
     {1, "Ryu", "Japan", 15, 0, nil, nil, 86, 94, 30, 1, 6},
     {2, "E.Honda", "Japan", 284, 0, nil, nil, 354, 95, 56, 1, 7},
