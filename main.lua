@@ -20,8 +20,9 @@ love.graphics.setDefaultFilter("nearest")
 
 local my_game_settings = require("game_settings")
 local my_scenes = require("scenes")
-local my_characters = require("characters")
+local my_start_menu = require("start_menu")
 local my_player_select_menu = require("player_select_menu")
+local my_characters = require("characters")
 local my_flags = require("flags")
 local my_snd = require("snd")
 
@@ -36,6 +37,7 @@ function love.load()
     WIDTH = love.graphics.getWidth()
     HEIGHT = love.graphics.getHeight()
 
+    my_start_menu.load()
     my_player_select_menu.load()
     my_characters.load()
     my_flags.load()
@@ -50,10 +52,14 @@ function love.update(dt)
 end
 
 function love.draw()
+    if my_scenes.selected == 1 then
+        love.graphics.setBackgroundColor(0.1, 0.1, 0.1)
+        my_start_menu.draw()
+    end
     if my_scenes.selected == 2 then
         love.graphics.setBackgroundColor(my_player_select_menu.background_color[1] / 255,
-                                     my_player_select_menu.background_color[2] / 255,
-                                     my_player_select_menu.background_color[3] / 255)
+                                         my_player_select_menu.background_color[2] / 255,
+                                         my_player_select_menu.background_color[3] / 255)
         my_player_select_menu.draw()
         my_characters.draw()
         my_flags.draw()
