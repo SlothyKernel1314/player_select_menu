@@ -70,7 +70,9 @@ end
 function love.keypressed(key)
     if key=="escape" then love.event.quit() end
     print("key pressed : "..key)
-
+    if my_scenes.selected == 1 then
+        my_start_menu.start_game()
+    end
     if my_scenes.selected == 2 then
         my_characters.change()
     end

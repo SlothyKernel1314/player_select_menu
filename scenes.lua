@@ -6,6 +6,6 @@ scenes.data = {
     {2, "Player Select Menu"}
 }
 
-scenes.selected = 2
+scenes.selected = 1
 
 return scenes

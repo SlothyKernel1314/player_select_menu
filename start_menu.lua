@@ -1,6 +1,7 @@
 -- MODULES -------------------------------------------------------------------------------------------------------------
 
 local my_game_settings = require("game_settings")
+local my_scenes = require("scenes")
 
 
 -- PLAYER SELECT MENU ATTRIBUTES ---------------------------------------------------------------------------------------
@@ -35,6 +36,12 @@ function start_menu.sf2_logo_draw()
                        start_menu.sf2_logo.y * my_game_settings.scale_factor,
                        nil,
                        my_game_settings.scale_factor, my_game_settings.scale_factor)
+end
+
+function start_menu.start_game()
+    if love.keyboard.isDown("return") then
+        my_scenes.selected = 2
+    end
 end
 
 
