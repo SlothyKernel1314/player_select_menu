@@ -19,6 +19,7 @@ love.graphics.setDefaultFilter("nearest")
 -- MODULES -------------------------------------------------------------------------------------------------------------
 
 local my_game_settings = require("game_settings")
+local my_scenes = require("scenes")
 local my_characters = require("characters")
 local my_player_select_menu = require("player_select_menu")
 local my_flags = require("flags")
@@ -41,25 +42,32 @@ function love.load()
 end
 
 function love.update(dt)
-    if not my_snd.character_select:isPlaying() then
-		love.audio.play(my_snd.character_select)
-	end
+    if my_scenes.selected == 2 then
+        if not my_snd.character_select:isPlaying() then
+            love.audio.play(my_snd.character_select)
+        end
+    end
 end
 
 function love.draw()
-    love.graphics.setBackgroundColor(my_player_select_menu.background_color[1] / 255,
+    if my_scenes.selected == 2 then
+        love.graphics.setBackgroundColor(my_player_select_menu.background_color[1] / 255,
                                      my_player_select_menu.background_color[2] / 255,
                                      my_player_select_menu.background_color[3] / 255)
-    my_player_select_menu.draw()
-    my_characters.draw()
-    my_flags.draw()
+        my_player_select_menu.draw()
+        my_characters.draw()
+        my_flags.draw()
+    end
 end
 
 
 -- CONTROLS ------------------------------------------------------------------------------------------------------------
 
 function love.keypressed(key)
-    my_characters.change()
     if key=="escape" then love.event.quit() end
     print("key pressed : "..key)
+
+    if my_scenes.selected == 2 then
+        my_characters.change()
+    end
 end
