@@ -44,8 +44,15 @@ function love.load()
 end
 
 function love.update(dt)
+    if my_scenes.selected == 1 then
+        if not my_snd.the_world_warrior:isPlaying() then
+            love.audio.stop()
+            love.audio.play(my_snd.the_world_warrior)
+        end
+    end
     if my_scenes.selected == 2 then
         if not my_snd.character_select:isPlaying() then
+            love.audio.stop()
             love.audio.play(my_snd.character_select)
         end
     end
