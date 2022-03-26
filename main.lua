@@ -6,7 +6,7 @@
 -- Street Fighter Wiki - Character Select : https://streetfighter.fandom.com/wiki/Character_Select
 -- Street Fighter Wiki - Street Fighter 2 The World Warrior : https://streetfighter.fandom.com/wiki/Street_Fighter_II:_The_World_Warrior
 -- Street Fighter 2 Turbo Hyper Fighting (SNES) - World of Longplays : https://www.youtube.com/watch?v=8Usyp6OBAa8
--- The Spriter Ressources - SF2 (SNES) Player Select tilesets : https://www.spriters-resource.com/snes/streetfighteriistreetfighteriiturbo/
+-- The Spriter Ressources - SF2 (SNES) tilesets : https://www.spriters-resource.com/snes/streetfighteriistreetfighteriiturbo/
 -- The Spriter Ressources - SF2 (SNES) sounds : https://www.sounds-resource.com/snes/streetfighteriistreetfighteriiturbo/sound/34143/
 
 
@@ -53,13 +53,11 @@ end
 
 function love.draw()
     if my_scenes.selected == 1 then
-        love.graphics.setBackgroundColor(0.1, 0.1, 0.1)
+        love.graphics.setBackgroundColor(my_start_menu.background_color)
         my_start_menu.draw()
     end
     if my_scenes.selected == 2 then
-        love.graphics.setBackgroundColor(my_player_select_menu.background_color[1] / 255,
-                                         my_player_select_menu.background_color[2] / 255,
-                                         my_player_select_menu.background_color[3] / 255)
+        love.graphics.setBackgroundColor(my_player_select_menu.background_color)
         my_player_select_menu.draw()
         my_characters.draw()
         my_flags.draw()
