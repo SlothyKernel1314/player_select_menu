@@ -50,6 +50,7 @@ player_select_menu.pselec_header.y = 29
 -- FUNCTIONS -----------------------------------------------------------------------------------------------------------
 
 function player_select_menu.main_tileset_load()
+    -- WARNING : character costumes ---> SF2 : champion Edition tileset (=! Hyper Fighting)
     player_select_menu.main_tileset = love.graphics.newImage("img/sf2_snes_player_select_tileset.png")
 end
 
