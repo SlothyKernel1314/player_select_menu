@@ -4,7 +4,7 @@ local my_game_settings = require("game_settings")
 local my_scenes = require("scenes")
 
 
--- PLAYER SELECT MENU ATTRIBUTES ---------------------------------------------------------------------------------------
+-- ATTRIBUTES ----------------------------------------------------------------------------------------------------------
 
 local start_menu = {}
 

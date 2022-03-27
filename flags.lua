@@ -5,7 +5,7 @@ local my_characters = require("characters")
 local my_player_select_menu = require("player_select_menu")
 
 
--- CHARACTERS ATTRIBUTES -----------------------------------------------------------------------------------------------
+-- ATTRIBUTES ----------------------------------------------------------------------------------------------------------
 
 local flags = {}
 

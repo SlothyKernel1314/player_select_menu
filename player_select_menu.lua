@@ -3,7 +3,7 @@
 local my_game_settings = require("game_settings")
 
 
--- PLAYER SELECT MENU ATTRIBUTES ---------------------------------------------------------------------------------------
+-- ATTRIBUTES ----------------------------------------------------------------------------------------------------------
 
 local player_select_menu = {}
 
@@ -66,7 +66,6 @@ function player_select_menu.lower_black_strip_load()
 end
 
 function player_select_menu.characters_box_selection_load()
-    -- TODO: décaler la box vers la gauche après placement des vignettes de personnages
     player_select_menu.characters_box_selection.texture = love.graphics.newQuad(110, 498,
                                                                                 121, 65,
                                                                                 player_select_menu.main_tileset:getDimensions())

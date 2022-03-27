@@ -5,7 +5,7 @@ local my_sfx = require("sfx")
 local my_player_select_menu = require("player_select_menu")
 
 
--- CHARACTERS ATTRIBUTES -----------------------------------------------------------------------------------------------
+-- ATTRIBUTES ----------------------------------------------------------------------------------------------------------
 
 local characters = {}
 
